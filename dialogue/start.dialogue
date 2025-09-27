@@ -1,0 +1,29 @@
+~ start
+Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
+Nathan: Here are some choices.
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END
+
+~ intro
+[speed=0.2][shake rate=20.0 level=2][next=2.0] And we passed the buildings
+[speed=0.18][shake rate=25.0 level=2.5][next=2.5] And we passed the rooms
+[speed=0.16][shake rate=30.0 level=3][next=3.0] And we passed the paths
+[speed=0.1][shake rate=35.0 level=10][next=0.5] And when we passed they were all
+=> END
+
+~ intro2
+...: dead! dead as a doornail, not like I could've done much about it
+.: [speed=0.5][next=0.0]I mean you were just kind of standing there don't you think you could've
+...: Oh, hey you're awake, do you think you could take these to the filing room, forgot to put them away after last nights meeting.
+- Sure
+	...: Thanks.
+- Give me a minute. (You were handed the documents.)
+	...: I didn't say in a minute, here. (You were handed the documents.)
+* ugh, this place looks hideous.
+=> END
