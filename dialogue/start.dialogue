@@ -18,12 +18,25 @@ Nathan: For more information see the online documentation.
 => END
 
 ~ intro2
-...: dead! dead as a doornail, not like I could've done much about it
-.: [speed=0.5][next=0.0]I mean you were just kind of standing there don't you think you could've
-...: Oh, hey you're awake, do you think you could take these to the filing room, forgot to put them away after last nights meeting.
+Purple: dead! dead as a doornail, not like I could've done much about it
+Red: [speed=0.2][next=0.0]I mean you were just kind of standing there don't you think you could've
+set Global.diag1mv=1
+Purple: Oh, hey you're awake, do you think you could take these to the filing room, forgot to put them away after last nights meeting.
 - Sure
-	...: Thanks.
-- Give me a minute. (You were handed the documents.)
+	...: Thanks. (You were handed the documents.)
+- Give me a minute.
 	...: I didn't say in a minute, here. (You were handed the documents.)
-* ugh, this place looks hideous.
+* I should probably take these...
+=> END
+~ facade
+[next=0.5]* w-
+* what? what the hell is this?
+dev: [speed=0.5][shake rate=20.0 level=8] oooooooooo its called putting too much time into story and not enough time into implementing it
+* so this is everything?
+dev: [speed=0.5][shake rate=20.0 level=8] what no the games not done yet, i just need time to implement the different dialogue paths
+dev: [speed=0.5][shake rate=20.0 level=8] as well as to make the art.
+* oh.
+dev: [speed=0.5][shake rate=20.0 level=8] did you expect like a whole 5 hour aaa game?
+* no i just thought there wouldve been more stuff here.
+dev: [speed=0.5][shake rate=20.0 level=8] soon(tm), thanks for playing though! Hope to see you back here soon when theres more content.
 => END

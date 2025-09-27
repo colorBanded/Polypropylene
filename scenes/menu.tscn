@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bapladtu6xmqq"]
+[gd_scene load_steps=5 format=3 uid="uid://bapladtu6xmqq"]
 
+[ext_resource type="Script" uid="uid://ci5b1826ehgao" path="res://scripts/menu.gd" id="1_mhnvy"]
 [ext_resource type="FontFile" uid="uid://d3bvd7yk6yal5" path="res://fonts/ITC Avant Garde Gothic Book Condensed.otf" id="1_vjb58"]
 [ext_resource type="Script" uid="uid://c8bb0y04nroqg" path="res://scripts/bg.gd" id="2_con2f"]
 [ext_resource type="FontFile" uid="uid://bgyenk36ctaec" path="res://fonts/new-science-bold-extended.otf" id="2_mhnvy"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mhnvy")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -32,19 +34,6 @@ theme_override_fonts/font = ExtResource("1_vjb58")
 theme_override_font_sizes/font_size = 96
 text = "polypropylene"
 
-[node name="Label2" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = -56.0
-offset_top = -71.0
-offset_right = 1183.0
-offset_bottom = 883.6
-theme_override_fonts/font = ExtResource("1_vjb58")
-theme_override_font_sizes/font_size = 46
-text = "propane butane pentane hexane heptane octane nonane decane benzene toluene xylene phenol aniline pyridine quinoline naphthalene anthracene methanol ethanol propanol butanol glycerol formaldehyde acetaldehyde acetone ethyl acetate diethyl ether chloroform carbon tetrachloride dichloromethane trichloroethylene perchloroethylene vinyl chloride styrene acrylonitrile butadiene isoprene neoprene polystyrene polypropylene polyvinyl chloride polyethylene terephthalate nylon acrylic polyurethane epoxy phenolic melamine urea thiourea guanidine creatine creatinine urea nitrogen ammonia hydrazine hydroxylamine nitric oxide nitrous oxide nitrogen dioxide dinitrogen tetroxide nitric acid nitrous acid sodium nitrate potassium nitrate ammonium nitrate calcium nitrate barium nitrate lead nitrate silver nitrate mercury nitrate copper nitrate zinc nitrate iron nitrate aluminum nitrate magnesium nitrate lithium nitrate cesium nitrate rubidium nitrate strontium nitrate radium nitrate uranium nitrate thorium nitrate plutonium nitrate americium nitrate curium nitrate berkelium nitrate californium nitrate einsteinium nitrate fermium nitrate mendelevium nitrate nobelium nitrate lawrencium nitrate rutherfordium nitrate dubnium nitrate seaborgium nitrate bohrium nitrate"
-horizontal_alignment = 3
-autowrap_mode = 3
-
 [node name="play" type="Button" parent="."]
 layout_mode = 0
 offset_left = 15.0
@@ -56,7 +45,7 @@ theme_override_font_sizes/font_size = 116
 text = "play"
 flat = true
 
-[node name="play2" type="Button" parent="."]
+[node name="settings" type="Button" parent="."]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 471.0
@@ -75,3 +64,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_con2f")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

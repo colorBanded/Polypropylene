@@ -142,6 +142,7 @@ theme_override_fonts/normal_font = ExtResource("2_0h7l7")
 theme_override_fonts/italics_font = ExtResource("3_l66yw")
 theme_override_fonts/bold_italics_font = ExtResource("4_g51tu")
 theme_override_fonts/bold_font = ExtResource("5_cy8em")
+theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -155,7 +156,7 @@ theme_override_fonts/normal_font = ExtResource("5_cy8em")
 theme_override_fonts/italics_font = ExtResource("4_g51tu")
 theme_override_fonts/bold_italics_font = ExtResource("7_tyuxq")
 theme_override_fonts/bold_font = ExtResource("8_4vtk4")
-theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/normal_font_size = 35
 text = "Dialogue..."
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]

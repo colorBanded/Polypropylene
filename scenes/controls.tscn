@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://lrru1qhwwqe3"]
+
+[ext_resource type="Script" uid="uid://hhptnli3s6ol" path="res://scripts/controls.gd" id="1_ihl6s"]
+[ext_resource type="FontFile" uid="uid://bvjmgminfu5np" path="res://fonts/HelveticaMed/HelveticaNeue-MediumCond.otf" id="2_jlst0"]
+[ext_resource type="FontFile" uid="uid://eny1rn0adr66" path="res://fonts/HelveticaMed/HelveticaNeue-MediumExt.otf" id="3_dloai"]
+[ext_resource type="FontFile" uid="uid://djjjp3onklyry" path="res://fonts/HelveticaMed/HelveticaNeue-MediumExtObl.otf" id="4_k6bol"]
+
+[node name="controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ihl6s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -280.0
+offset_right = 188.0
+offset_bottom = -195.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_jlst0")
+theme_override_font_sizes/font_size = 36
+text = "Please read before playing."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 252.0
+offset_right = 966.0
+offset_bottom = 405.4
+theme_override_fonts/font = ExtResource("3_dloai")
+text = "I have not implemented dialogue finish indicators yet. When new text stops appearing
+you may press enter to go to the next line.
+
+A: Move left
+D: Move right
+Space: Jump
+Shift: Speed Burst
+
+Fullscreen is recommended."
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 550.0
+offset_right = 977.0
+offset_bottom = 602.0
+theme_override_fonts/font = ExtResource("4_k6bol")
+theme_override_font_sizes/font_size = 36
+text = "start"
+flat = true
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
