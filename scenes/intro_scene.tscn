@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c273tbk46xb8s"]
+[gd_scene load_steps=3 format=3 uid="uid://c273tbk46xb8s"]
 
 [ext_resource type="Script" uid="uid://dgio8ab2gfm0h" path="res://scripts/intro_scene.gd" id="1_xmg1o"]
+[ext_resource type="FontFile" uid="uid://hh4ynog66ag6" path="res://fonts/HelveticaCond/HelveticaNeue-ThinCond.otf" id="2_0y5sa"]
 
 [node name="introScene" type="Node2D"]
 script = ExtResource("1_xmg1o")
@@ -11,3 +12,14 @@ offset_top = -61.0
 offset_right = 1266.0
 offset_bottom = 688.0
 color = Color(0, 0, 0, 1)
+
+[node name="prsenter" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 540.0
+offset_right = 1152.0
+offset_bottom = 593.0
+theme_override_fonts/font = ExtResource("2_0y5sa")
+theme_override_font_sizes/font_size = 31
+text = "Press enter to begin."
+horizontal_alignment = 1
+vertical_alignment = 1

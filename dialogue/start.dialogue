@@ -1,20 +1,11 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
 => END
-
+~ Start
 ~ intro
 [speed=0.2][shake rate=20.0 level=2][next=2.0] And we passed the buildings
 [speed=0.18][shake rate=25.0 level=2.5][next=2.5] And we passed the rooms
 [speed=0.16][shake rate=30.0 level=3][next=3.0] And we passed the paths
-[speed=0.1][shake rate=35.0 level=10][next=0.5] And when we passed they were all
+[speed=0.1][shake rate=35.0 level=10][next=0.5] And when we passed, they were all
 => END
 
 ~ intro2
@@ -23,12 +14,22 @@ Red: [speed=0.2][next=0.0]I mean you were just kind of standing there don't you 
 set Global.diag1mv=1
 Purple: Oh, hey you're awake, do you think you could take these to the filing room, forgot to put them away after last nights meeting.
 - Sure
-	...: Thanks. (You were handed the documents.)
+	* Thanks. (You were handed the documents.)
 - Give me a minute.
-	...: I didn't say in a minute, here. (You were handed the documents.)
+	* I didn't say in a minute, here. (You were handed the documents.)
 * I should probably take these...
 => END
 ~ facade
+[next=0.5]* w-
+* what? what the hell is this?
+dev: [speed=0.5][shake rate=20.0 level=8] oooooooooo its called putting too much time into story and not enough time into implementing it
+* so this is everything?
+dev: [speed=0.5][shake rate=20.0 level=8] What no, just head back.
+* wait who even are you, where are you I don't see you??
+dev: [speed=0.5][shake rate=20.0 level=8] Just go.
+set Global.keepGoing=1
+=> END
+~ facade2
 [next=0.5]* w-
 * what? what the hell is this?
 dev: [speed=0.5][shake rate=20.0 level=8] oooooooooo its called putting too much time into story and not enough time into implementing it
@@ -39,4 +40,29 @@ dev: [speed=0.5][shake rate=20.0 level=8] as well as to make the art.
 dev: [speed=0.5][shake rate=20.0 level=8] did you expect like a whole 5 hour aaa game?
 * no i just thought there wouldve been more stuff here.
 dev: [speed=0.5][shake rate=20.0 level=8] soon(tm), thanks for playing though! Hope to see you back here soon when theres more content.
+set Global.talkedToPurple=1
+=> END
+
+~ passby0
+Red: [speed=0.2]So what you're not gonna say anything about it?
+Purple: [next=1]Look, 
+Purple: [speed=0.6][next=0.6]The machines busted, everythings going downhill, there wont be another one if
+* The conversation became inaudible. Probably best to keep going.
+=> END
+
+~ pretitledrop
+[speed=0.5][next=1] ...
+=> END
+~ titledrop
+[speed=0.05][shake rate=20 level=15][next=3]polypropylene
+[shake rate=10 level=8][next=2]We need to go, now.
+[speed=0.1][shake rate=15 level=10][next=1]We need to go,
+=> END
+
+~ tale1
+[speed=0.5]What the...
+[speed=0.5]* I should probably get out of here quickly.
+=> END
+
+~ blank
 => END

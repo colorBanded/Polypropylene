@@ -24,37 +24,16 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 19.0
 offset_top = 14.0
-offset_right = 272.0
-offset_bottom = 56.6
+offset_right = 547.0
+offset_bottom = 102.8
 theme_override_colors/font_color = Color(0.162066, 0.162066, 0.162066, 1)
 theme_override_fonts/font = ExtResource("1_vjb58")
 theme_override_font_sizes/font_size = 96
 text = "polypropylene"
-
-[node name="play" type="Button" parent="."]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 271.0
-offset_right = 325.0
-offset_bottom = 429.0
-theme_override_fonts/font = ExtResource("2_mhnvy")
-theme_override_font_sizes/font_size = 116
-text = "play"
-flat = true
-
-[node name="settings" type="Button" parent="."]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 471.0
-offset_right = 633.0
-offset_bottom = 629.0
-theme_override_fonts/font = ExtResource("2_mhnvy")
-theme_override_font_sizes/font_size = 116
-text = "settings"
-flat = true
 
 [node name="bg" type="Control" parent="."]
 layout_mode = 1
@@ -64,5 +43,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_con2f")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 475.0
+offset_right = 334.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("2_mhnvy")
+theme_override_font_sizes/font_size = 116
+text = "play"
+flat = true
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]

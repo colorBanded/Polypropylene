@@ -5,6 +5,7 @@ class_name DialogueManagerExampleBalloon extends CanvasLayer
 @export var next_action: StringName = &"ui_accept"
 
 @export var skip_action: StringName = &"ui_cancel"
+@onready var talk_sound_tale: AudioStreamPlayer = $TalkSound
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -166,7 +167,11 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 		next(dialogue_line.next_id)
 	elif event.is_action_pressed(next_action) and get_viewport().gui_get_focus_owner() == balloon:
 		next(dialogue_line.next_id)
-
+		
+		
+func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
+	if not letter in [".", " "]:
+		talk_sound_tale.play()
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)

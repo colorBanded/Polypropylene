@@ -12,6 +12,7 @@ const DMCompilerResult = preload("./compiler/compiler_result.gd")
 const DMResolvedLineData = preload("./compiler/resolved_line_data.gd")
 
 
+
 ## Emitted when a dialogue balloon is created and dialogue starts
 signal dialogue_started(resource: DialogueResource)
 
@@ -470,8 +471,8 @@ func _start_balloon(balloon: Node, resource: DialogueResource, title: String, ex
 		balloon.start(resource, title, extra_game_states)
 	elif balloon.has_method(&"Start"):
 		balloon.Start(resource, title, extra_game_states)
-	else:
-		assert(false, DMConstants.translate(&"runtime.dialogue_balloon_missing_start_method"))
+	# else:
+		# assert(false, DMConstants.translate(&"runtime.dialogue_balloon_missing_start_method"))
 
 	dialogue_started.emit(resource)
 	bridge_dialogue_started.emit(resource)
