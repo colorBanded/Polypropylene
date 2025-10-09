@@ -5,11 +5,13 @@ extends Control
 @onready var sprite_2d: Sprite2D = $CharacterBody2D/Sprite2D
 @onready var camera_2d: Camera2D = $CharacterBody2D/Camera2D
 @onready var collision_shape_2d: CollisionShape2D = $CharacterBody2D/CollisionShape2D
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 
 const SPEED = 100.0  
 const DIAGONAL_SPEED_MULTIPLIER = 0.707  
 
 func _ready() -> void:
+	animation_player.play_backwards("fadeOut")
 	DialogueManager.dialogue_started.connect(_on_dialogue_started)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 

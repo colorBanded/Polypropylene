@@ -51,18 +51,21 @@ Purple: [speed=0.6][next=0.6]The machines busted, everythings going downhill, th
 => END
 
 ~ pretitledrop
-[speed=0.5][next=1] ...
+[speed=1.5][next=0] Loadfail.value("Helpme
 => END
 ~ titledrop
 [speed=0.05][shake rate=20 level=15][next=3]polypropylene
 [shake rate=10 level=8][next=2]We need to go, now.
-[speed=0.1][shake rate=15 level=10][next=1]We need to go,
+[speed=0.1][shake rate=15 level=10][next=1]We need to go
 => END
 
 ~ tale1
 [speed=0.5]What the...
 [speed=0.5]* I should probably get out of here quickly.
 => END
+
+~ tale2
+[speed=0.5] A part of me is starting to wonder how many times I'll have to do this...
 
 ~ blank
 => END

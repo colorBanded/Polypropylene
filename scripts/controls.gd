@@ -1,9 +1,10 @@
 extends Control
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @onready var start_button: Button = $start
 
 func _ready() -> void:
-
+	animation_player.play("musFade")
 	start_button.add_theme_color_override("font_color", Color.BLACK)
 
 	var tween = create_tween()

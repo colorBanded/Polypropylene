@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjcerpytvkk4t"]
+[gd_scene load_steps=11 format=3 uid="uid://bjcerpytvkk4t"]
 
 [ext_resource type="Texture2D" uid="uid://rksc5350ckf0" path="res://art/Wallpaper.png" id="1_7gre8"]
 [ext_resource type="Texture2D" uid="uid://c67nfc7hv18pf" path="res://art/softBoot.png" id="2_81rff"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://tyf1bl1wcfsg" path="res://scripts/desktop_ui_controller.gd" id="3_dcrhm"]
 [ext_resource type="FontFile" uid="uid://dopkgvilknuhk" path="res://fonts/Delicatus.ttf" id="4_ox5hf"]
 [ext_resource type="FontFile" uid="uid://dsevm2t7rdpae" path="res://fonts/MS Sans Serif 1.ttf" id="6_6ajoh"]
+[ext_resource type="Script" uid="uid://dobmr7nm5dq8c" path="res://scripts/desktop_text.gd" id="7_veafp"]
 
 [sub_resource type="Animation" id="Animation_6ajoh"]
 length = 0.001
@@ -96,9 +97,6 @@ offset_top = -133.0
 offset_right = 421.0
 offset_bottom = 233.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_veafp")
@@ -120,7 +118,6 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="SoftBoot" type="Sprite2D" parent="."]
-visible = false
 texture_filter = 1
 position = Vector2(580, 326)
 texture = ExtResource("2_81rff")
@@ -198,7 +195,7 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0.917647, 1)
 theme_override_fonts/font = ExtResource("4_ox5hf")
 theme_override_font_sizes/font_size = 31
-text = "itemlabel"
+text = "stor_und"
 flat = true
 alignment = 0
 
@@ -210,5 +207,9 @@ offset_right = 1124.0
 offset_bottom = 630.0
 theme_override_colors/font_color = Color(0.973535, 0.973535, 0.973535, 1)
 theme_override_fonts/font = ExtResource("6_6ajoh")
-theme_override_font_sizes/font_size = 12
-text = "TEXT"
+theme_override_font_sizes/font_size = 22
+text = "undefined.string"
+script = ExtResource("7_veafp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)

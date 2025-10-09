@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://kuu78f1mtgjr"]
+[gd_scene load_steps=19 format=4 uid="uid://kuu78f1mtgjr"]
 
 [ext_resource type="Texture2D" uid="uid://dvvimqve4o010" path="res://art/factory_tileset.png" id="1_d25p5"]
 [ext_resource type="Texture2D" uid="uid://blgj0o1sd1lj" path="res://art/office.png" id="2_fqdbl"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://0kqiccx52pu5" path="res://art/npc_red.png" id="6_7t13t"]
 [ext_resource type="Script" uid="uid://bc1tdqnsjn75d" path="res://scripts/cutscene_intro2.gd" id="8_7t13t"]
 [ext_resource type="Script" uid="uid://d1yukfirbio4a" path="res://scripts/intro2_area_2d.gd" id="9_u41m5"]
+[ext_resource type="AudioStream" uid="uid://cpwgwj0j1m2ie" path="res://sfx/bgm/the-ambience-room-tone-139064.mp3" id="10_h63fj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7t13t"]
 texture = ExtResource("1_d25p5")
@@ -1687,6 +1688,11 @@ position = Vector2(3, 160)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DiagIndicator3"]
 shape = SubResource("RectangleShape2D_h63fj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_h63fj")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="DiagIndicator2" to="Dialogue" method="_on_diag_indicator_2_body_entered"]
 [connection signal="body_entered" from="DiagIndicator3" to="Dialogue" method="_on_diag_indicator_3_body_entered"]

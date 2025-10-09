@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bapladtu6xmqq"]
+[gd_scene load_steps=6 format=3 uid="uid://bapladtu6xmqq"]
 
 [ext_resource type="Script" uid="uid://ci5b1826ehgao" path="res://scripts/menu.gd" id="1_mhnvy"]
 [ext_resource type="FontFile" uid="uid://d3bvd7yk6yal5" path="res://fonts/ITC Avant Garde Gothic Book Condensed.otf" id="1_vjb58"]
 [ext_resource type="Script" uid="uid://c8bb0y04nroqg" path="res://scripts/bg.gd" id="2_con2f"]
 [ext_resource type="FontFile" uid="uid://bgyenk36ctaec" path="res://fonts/new-science-bold-extended.otf" id="2_mhnvy"]
+[ext_resource type="AudioStream" uid="uid://rh2quc327aca" path="res://sfx/bgm/winter-wind-305577.mp3" id="5_4ytvr"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -54,5 +55,10 @@ theme_override_fonts/font = ExtResource("2_mhnvy")
 theme_override_font_sizes/font_size = 116
 text = "play"
 flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4ytvr")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]

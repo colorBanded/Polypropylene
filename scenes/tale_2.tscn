@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://breydfhc1qu83"]
+[gd_scene load_steps=23 format=4 uid="uid://breydfhc1qu83"]
 
 [ext_resource type="Texture2D" uid="uid://bk21rfww5rhnf" path="res://art/tale/ruin1.png" id="1_6pyec"]
 [ext_resource type="Texture2D" uid="uid://t40mup0jdgu7" path="res://art/tale/ruin2.png" id="2_rxkao"]
@@ -419,6 +419,46 @@ size = Vector2(792, 110)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ve0l"]
 size = Vector2(362, 36)
 
+[sub_resource type="Animation" id="Animation_rxkao"]
+resource_name = "fadeOut"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sxtw6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ve0l"]
+_data = {
+&"RESET": SubResource("Animation_sxtw6"),
+&"fadeOut": SubResource("Animation_rxkao")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt6up"]
+size = Vector2(91, 126)
+
 [node name="tale2" type="Control"]
 texture_filter = 1
 layout_mode = 3
@@ -469,7 +509,7 @@ offset_left = -11.0
 offset_top = 24.0
 offset_right = 11.0
 offset_bottom = 28.0
-color = Color(0, 0, 0, 0.45098)
+color = Color(0, 0, 0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="talePC/CharacterBody2D"]
 position = Vector2(0, 18)
@@ -531,3 +571,24 @@ shape = SubResource("RectangleShape2D_4ve0l")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1004, 355)
 shape = SubResource("RectangleShape2D_4ve0l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -514.0
+offset_top = -251.0
+offset_right = 1901.0
+offset_bottom = 1033.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4ve0l")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(548.5, 437)
+shape = SubResource("RectangleShape2D_dt6up")
+
+[connection signal="area_entered" from="Area2D" to="dialogue" method="_on_area_2d_area_entered"]

@@ -1,9 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://lrru1qhwwqe3"]
+[gd_scene load_steps=9 format=3 uid="uid://lrru1qhwwqe3"]
 
 [ext_resource type="Script" uid="uid://hhptnli3s6ol" path="res://scripts/controls.gd" id="1_ihl6s"]
 [ext_resource type="FontFile" uid="uid://bvjmgminfu5np" path="res://fonts/HelveticaMed/HelveticaNeue-MediumCond.otf" id="2_jlst0"]
 [ext_resource type="FontFile" uid="uid://eny1rn0adr66" path="res://fonts/HelveticaMed/HelveticaNeue-MediumExt.otf" id="3_dloai"]
 [ext_resource type="FontFile" uid="uid://djjjp3onklyry" path="res://fonts/HelveticaMed/HelveticaNeue-MediumExtObl.otf" id="4_k6bol"]
+[ext_resource type="AudioStream" uid="uid://ivfm3vh2fbpq" path="res://sfx/bgm/2020-06-30-circuit-22-bass-54108.mp3" id="5_jlst0"]
+
+[sub_resource type="Animation" id="Animation_jlst0"]
+resource_name = "musFade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dloai"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k6bol"]
+_data = {
+&"RESET": SubResource("Animation_dloai"),
+&"musFade": SubResource("Animation_jlst0")
+}
 
 [node name="controls" type="Control"]
 layout_mode = 3
@@ -68,5 +106,15 @@ theme_override_fonts/font = ExtResource("4_k6bol")
 theme_override_font_sizes/font_size = 36
 text = "start"
 flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jlst0")
+autoplay = true
+parameters/looping = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_k6bol")
+}
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
