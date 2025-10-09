@@ -27,6 +27,7 @@ dev: [speed=0.5][shake rate=20.0 level=8] oooooooooo its called putting too much
 dev: [speed=0.5][shake rate=20.0 level=8] What no, just head back.
 * wait who even are you, where are you I don't see you??
 dev: [speed=0.5][shake rate=20.0 level=8] Just go.
+Go back.
 set Global.keepGoing=1
 => END
 ~ facade2

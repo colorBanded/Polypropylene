@@ -92,9 +92,17 @@ you may press enter to go to the next line.
 A: Move left
 D: Move right
 Space: Jump
-Shift: Speed Burst
+Shift: Speed Burst"
 
-Fullscreen is recommended."
+[node name="fscrn" type="Label" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 435.0
+offset_right = 966.0
+offset_bottom = 470.0
+theme_override_fonts/font = ExtResource("3_dloai")
+theme_override_font_sizes/font_size = 26
+text = "FULLSCREEN REQUIRED TO READ SOME TEXT"
 
 [node name="start" type="Button" parent="."]
 layout_mode = 0
