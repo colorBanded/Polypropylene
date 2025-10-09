@@ -6,6 +6,21 @@
 [ext_resource type="FontFile" uid="uid://djjjp3onklyry" path="res://fonts/HelveticaMed/HelveticaNeue-MediumExtObl.otf" id="4_k6bol"]
 [ext_resource type="AudioStream" uid="uid://ivfm3vh2fbpq" path="res://sfx/bgm/2020-06-30-circuit-22-bass-54108.mp3" id="5_jlst0"]
 
+[sub_resource type="Animation" id="Animation_dloai"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_jlst0"]
 resource_name = "musFade"
 length = 0.5
@@ -20,21 +35,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-80.0, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_dloai"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k6bol"]

@@ -8,3 +8,5 @@ var talkedIntro: int = 0
 var tale_2Talked: int = 0
 
 var deskFirstboot: int = 0
+
+var Status: int = 0

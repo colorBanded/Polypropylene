@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjcerpytvkk4t"]
+[gd_scene load_steps=12 format=3 uid="uid://bjcerpytvkk4t"]
 
 [ext_resource type="Texture2D" uid="uid://rksc5350ckf0" path="res://art/Wallpaper.png" id="1_7gre8"]
 [ext_resource type="Texture2D" uid="uid://c67nfc7hv18pf" path="res://art/softBoot.png" id="2_81rff"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://tyf1bl1wcfsg" path="res://scripts/desktop_ui_controller.gd" id="3_dcrhm"]
 [ext_resource type="FontFile" uid="uid://dopkgvilknuhk" path="res://fonts/Delicatus.ttf" id="4_ox5hf"]
 [ext_resource type="FontFile" uid="uid://dsevm2t7rdpae" path="res://fonts/MS Sans Serif 1.ttf" id="6_6ajoh"]
+[ext_resource type="Script" uid="uid://b0ys0xvqa2e7o" path="res://scripts/stor_und.gd" id="6_pkmwo"]
 [ext_resource type="Script" uid="uid://dobmr7nm5dq8c" path="res://scripts/desktop_text.gd" id="7_veafp"]
 
 [sub_resource type="Animation" id="Animation_6ajoh"]
@@ -178,7 +179,7 @@ offset_top = 171.0
 offset_right = 830.0
 offset_bottom = 630.0
 
-[node name="gamelabel" type="Button" parent="VBoxContainer2"]
+[node name="storUnd" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
@@ -198,6 +199,70 @@ theme_override_font_sizes/font_size = 31
 text = "stor_und"
 flat = true
 alignment = 0
+script = ExtResource("6_pkmwo")
+
+[node name="gamelabel2" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.917647, 1)
+theme_override_fonts/font = ExtResource("4_ox5hf")
+theme_override_font_sizes/font_size = 31
+text = "broken"
+flat = true
+alignment = 0
+
+[node name="gamelabel3" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.917647, 1)
+theme_override_fonts/font = ExtResource("4_ox5hf")
+theme_override_font_sizes/font_size = 31
+text = "broken"
+flat = true
+alignment = 0
+
+[node name="gamelabel4" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.917647, 1)
+theme_override_fonts/font = ExtResource("4_ox5hf")
+theme_override_font_sizes/font_size = 31
+text = "broken"
+flat = true
+alignment = 0
 
 [node name="storydiag" type="Label" parent="."]
 layout_mode = 0
@@ -207,9 +272,13 @@ offset_right = 1124.0
 offset_bottom = 630.0
 theme_override_colors/font_color = Color(0.973535, 0.973535, 0.973535, 1)
 theme_override_fonts/font = ExtResource("6_6ajoh")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 8
 text = "undefined.string"
+autowrap_mode = 3
 script = ExtResource("7_veafp")
+letters_per_second = 180.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
+
+[connection signal="pressed" from="VBoxContainer2/storUnd" to="VBoxContainer2/storUnd" method="_on_pressed"]

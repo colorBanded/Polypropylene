@@ -1,6 +1,6 @@
 ~ start
 => END
-~ Start
+
 ~ intro
 [speed=0.2][shake rate=20.0 level=2][next=2.0] And we passed the buildings
 [speed=0.18][shake rate=25.0 level=2.5][next=2.5] And we passed the rooms
@@ -66,6 +66,45 @@ Purple: [speed=0.6][next=0.6]The machines busted, everythings going downhill, th
 
 ~ tale2
 [speed=0.5] A part of me is starting to wonder how many times I'll have to do this...
+=> END
+
 
 ~ blank
+=> END
+
+
+# tale2.2 Dialogue start
+~ tale2n1
+[speed=0.5]*It seems like a long ways down...
+=> END
+
+~ tale2n2
+dev: [speed=0.5][shake rate=20.0 level=8] Hmm yeah..
+=> END
+
+~ tale2n3
+[speed=0.5]You again! How did you even get here?
+=> END
+
+~ tale2n4
+dev: [speed=0.5][shake rate=20.0 level=8] Don't worry about it for now. Think it'll make sense later. 
+=> END
+
+~ tale2n5
+[speed=0.5]Eh, well atleast you won't bother me too much.
+=> END
+
+~ tale2n6
+dev: [speed=0.5][shake rate=20.0 level=8] Well for now this is it, just cherish the new stuff you have.
+=> END
+
+~ tale2n7
+[speed=0.5]Fucks that supposed to mean? you're drip feeding me space in whatever existance this is.
+=> END
+
+~ tale2n8
+dev: [speed=0.5][shake rate=20.0 level=8] ... You'll get it eventually. 
+=> END
+~ tale2n9
+[speed=0.3][shake rate=5.0 level=8][next=0.3]Get what eventually? I don't even know you and I'm in this weird space where you keep
 => END

@@ -13,11 +13,11 @@ offset_right = 1266.0
 offset_bottom = 736.0
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="prs" type="Label" parent="."]
 offset_left = 959.0
 offset_top = 626.0
 offset_right = 1186.0
 offset_bottom = 649.0
 theme_override_colors/font_color = Color(0.158472, 0.158472, 0.158472, 1)
 theme_override_fonts/font = ExtResource("2_0y5sa")
-text = "Press [F] to skip introductory."
+text = "Press [F] to skip dialogue."

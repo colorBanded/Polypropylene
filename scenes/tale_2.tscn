@@ -419,21 +419,8 @@ size = Vector2(792, 110)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ve0l"]
 size = Vector2(362, 36)
 
-[sub_resource type="Animation" id="Animation_rxkao"]
-resource_name = "fadeOut"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.433333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt6up"]
+size = Vector2(91, 126)
 
 [sub_resource type="Animation" id="Animation_sxtw6"]
 length = 0.001
@@ -450,14 +437,27 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_rxkao"]
+resource_name = "fadeOut"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4ve0l"]
 _data = {
 &"RESET": SubResource("Animation_sxtw6"),
 &"fadeOut": SubResource("Animation_rxkao")
 }
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt6up"]
-size = Vector2(91, 126)
 
 [node name="tale2" type="Control"]
 texture_filter = 1
@@ -572,6 +572,16 @@ shape = SubResource("RectangleShape2D_4ve0l")
 position = Vector2(1004, 355)
 shape = SubResource("RectangleShape2D_4ve0l")
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="t1" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(548.5, 437)
+shape = SubResource("RectangleShape2D_dt6up")
+
+[node name="t2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(807, 320)
+shape = SubResource("RectangleShape2D_dt6up")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = -514.0
@@ -584,11 +594,5 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_4ve0l")
 }
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(548.5, 437)
-shape = SubResource("RectangleShape2D_dt6up")
 
 [connection signal="area_entered" from="Area2D" to="dialogue" method="_on_area_2d_area_entered"]

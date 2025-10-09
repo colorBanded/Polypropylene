@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://ke14wmgnyk3w"]
+
+[ext_resource type="Texture2D" uid="uid://rh3q5ojviasq" path="res://art/youwin.png" id="1_xsshc"]
+[ext_resource type="FontFile" uid="uid://bk7n5ygi4an2h" path="res://fonts/HelveticaCond/HelveticaNeue-ThinCondObl.otf" id="2_nlp21"]
+[ext_resource type="FontFile" uid="uid://bvjmgminfu5np" path="res://fonts/HelveticaMed/HelveticaNeue-MediumCond.otf" id="3_fnpa5"]
+[ext_resource type="FontFile" uid="uid://bxb6dnlnrbc0l" path="res://fonts/HelveticaMed/HelveticaNeue-Medium.otf" id="3_irtg8"]
+[ext_resource type="AudioStream" uid="uid://di6t1uedlhe4r" path="res://sfx/bgm/SpotiDown.App - Fresh air - Euology.mp3" id="5_vto6r"]
+
+[node name="imgview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Youwin" type="Sprite2D" parent="Control"]
+position = Vector2(398.625, 21.8529)
+scale = Vector2(0.154216, 0.154216)
+texture = ExtResource("1_xsshc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 12.0
+offset_right = 740.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_nlp21")
+theme_override_font_sizes/font_size = 36
+text = "leave.png"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 45.0
+offset_right = 124.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("3_irtg8")
+theme_override_font_sizes/font_size = 21
+text = "fresh air - eurogy.mp3"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 59.0
+offset_right = 742.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("3_fnpa5")
+theme_override_font_sizes/font_size = 21
+text = "5.1MiB | Portable Network Graphic"
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 133.0
+offset_right = 742.0
+offset_bottom = 653.2
+theme_override_fonts/font = ExtResource("3_fnpa5")
+theme_override_font_sizes/font_size = 21
+text = "NEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDINEVERENDI M  O   R    E     T      O       C       O        M       E"
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 121.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("2_nlp21")
+theme_override_font_sizes/font_size = 36
+text = "IAMviewer 10.7"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 84.0
+offset_right = 745.0
+offset_bottom = 631.0
+theme_override_fonts/font = ExtResource("2_nlp21")
+theme_override_font_sizes/font_size = 36
+text = "EXIF METADATA REPORT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vto6r")
+autoplay = true
