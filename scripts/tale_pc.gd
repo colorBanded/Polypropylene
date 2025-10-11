@@ -11,7 +11,12 @@ const SPEED = 100.0
 const DIAGONAL_SPEED_MULTIPLIER = 0.707  
 
 func _ready() -> void:
-	animation_player.play_backwards("fadeOut")
+	
+	
+	if get_tree().current_scene.name == "tale_3":
+		animation_player.play("fadeOut")
+	else:
+		animation_player.play_backwards("fadeOut")
 	DialogueManager.dialogue_started.connect(_on_dialogue_started)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
