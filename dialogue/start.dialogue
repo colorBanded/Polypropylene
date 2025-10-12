@@ -118,3 +118,7 @@ dev: [speed=0.5][shake rate=20.0 level=8] ... You'll get it eventually.
 ~ tale3n2
 [speed=0.5]* Can't go back now.
 => END!
+
+~ tale3n3
+[speed=0.5]It's time.
+=> END

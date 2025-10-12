@@ -49,7 +49,7 @@ func _on_body_entered(body: Node2D) -> void:
 		is_showing_dialogue = false
 		if not timer_started:
 			timer_started = true
-			await get_tree().create_timer(30.0).timeout
+			await get_tree().create_timer(10.0).timeout
 			start_tale3n3_dialogue()
 	else:
 		is_showing_dialogue = false

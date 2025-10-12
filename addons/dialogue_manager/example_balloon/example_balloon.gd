@@ -4,6 +4,7 @@ class_name DialogueManagerExampleBalloon extends CanvasLayer
 
 @export var skip_action: StringName = &"ui_cancel"
 @onready var talk_sound_tale: AudioStreamPlayer = $TalkSound
+@onready var talk_sound_tale2: AudioStreamPlayer = $TalkSound2
 
 var resource: DialogueResource
 
@@ -30,6 +31,8 @@ var dialogue_line: DialogueLine:
 
 var mutation_cooldown: Timer = Timer.new()
 
+var active_talk_sound: AudioStreamPlayer
+
 @onready var balloon: Control = %Balloon
 
 @onready var character_label: RichTextLabel = %CharacterLabel
@@ -39,6 +42,13 @@ var mutation_cooldown: Timer = Timer.new()
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
 func _ready() -> void:
+	# Determine which talk sound to use based on scene filename
+	var scene_file = scene_file_path
+	if scene_file.get_file() == "bound.tscn":
+		active_talk_sound = talk_sound_tale2
+	else:
+		active_talk_sound = talk_sound_tale
+	
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
@@ -138,7 +148,7 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
 	if not letter in [".", " "]:
-		talk_sound_tale.play()
+		active_talk_sound.play()
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
