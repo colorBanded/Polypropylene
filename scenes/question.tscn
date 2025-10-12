@@ -1,0 +1,177 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnwtas38bc3ob"]
+
+[ext_resource type="FontFile" uid="uid://b8iyo5iv2wtty" path="res://fonts/DTM-Sans.otf" id="1_uyt6k"]
+[ext_resource type="AudioStream" uid="uid://cblfqu76iy3n" path="res://sfx/bgm/Start Menu (Beta Mix) - Undertale.mp3" id="2_xasbo"]
+[ext_resource type="AudioStream" uid="uid://dafyjkaidvsnj" path="res://sfx/mus_cymbal.ogg" id="3_nr8i1"]
+[ext_resource type="Script" uid="uid://cl20qfbovmxa2" path="res://scripts/question_uicontroller.gd" id="3_xasbo"]
+
+[sub_resource type="Animation" id="Animation_xasbo"]
+resource_name = "question_intro"
+length = 5.19
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intro:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1, 5.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nr8i1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("intro:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pvsvl"]
+_data = {
+&"RESET": SubResource("Animation_nr8i1"),
+&"question_intro": SubResource("Animation_xasbo")
+}
+
+[node name="question" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -180.0
+offset_right = 20.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -15.7
+offset_right = 92.0
+offset_bottom = 15.7
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_uyt6k")
+theme_override_font_sizes/font_size = 56
+text = "Free will."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = 357.0
+offset_right = 92.0
+offset_bottom = 388.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.359069, 0.359069, 0.359069, 1)
+theme_override_fonts/font = ExtResource("1_uyt6k")
+theme_override_font_sizes/font_size = 20
+text = "This will alter the course of the game."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -33.0
+offset_right = 49.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="serious" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.9775, 0.55, 1)
+theme_override_fonts/font = ExtResource("1_uyt6k")
+theme_override_font_sizes/font_size = 26
+text = "Option A"
+flat = true
+
+[node name="unserious" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.9775, 0.55, 1)
+theme_override_fonts/font = ExtResource("1_uyt6k")
+theme_override_font_sizes/font_size = 26
+text = "Option B"
+flat = true
+
+[node name="uicontroller" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_xasbo")
+
+[node name="intro" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_right = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pvsvl")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nr8i1")
+autoplay = true
+parameters/looping = false
+
+[node name="mus" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xasbo")
+parameters/looping = true
+
+[connection signal="pressed" from="VBoxContainer/serious" to="uicontroller" method="_on_serious_pressed"]
+[connection signal="pressed" from="VBoxContainer/unserious" to="uicontroller" method="_on_unserious_pressed"]

@@ -44,7 +44,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		t2_talked = true
 		await show_mixed_dialogue("tale2n1")
 		is_showing_dialogue = false
-		get_tree().change_scene_to_file("res://scenes/imgview.tscn")
+		get_tree().change_scene_to_file("res://scenes/question.tscn")
 	else:
 		is_showing_dialogue = false
 
