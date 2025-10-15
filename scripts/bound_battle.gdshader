@@ -38,7 +38,6 @@ void fragment() {
         UV.x + horizontal_distort + breathing_x + diagonal + liquid_x * distortion_scale * 0.3 + horizontal_flow,
         UV.y + breathing_y + liquid_y * distortion_scale * 0.3 + vertical_flow
     );
-    
-    // Sample the texture
+    // stupid texture sampling
     COLOR = texture(TEXTURE, modified_uv);
 }

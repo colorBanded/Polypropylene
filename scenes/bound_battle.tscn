@@ -95,7 +95,7 @@ theme_override_fonts/font = ExtResource("2_w0j2d")
 theme_override_font_sizes/font_size = 31
 text = "YOU"
 
-[node name="Label2" type="Label" parent="PUI/NinePatchRect"]
+[node name="hpctr" type="Label" parent="PUI/NinePatchRect"]
 layout_mode = 0
 offset_left = 117.0
 offset_top = 64.0
@@ -103,7 +103,7 @@ offset_right = 168.0
 offset_bottom = 103.6
 theme_override_fonts/font = ExtResource("2_w0j2d")
 theme_override_font_sizes/font_size = 31
-text = "HP"
+text = "00"
 
 [node name="hp" type="Label" parent="PUI/NinePatchRect"]
 layout_mode = 0
@@ -113,9 +113,9 @@ offset_right = 82.0
 offset_bottom = 103.6
 theme_override_fonts/font = ExtResource("2_w0j2d")
 theme_override_font_sizes/font_size = 31
-text = "00"
+text = "HP"
 
-[node name="Label3" type="Label" parent="PUI/NinePatchRect"]
+[node name="ppctr" type="Label" parent="PUI/NinePatchRect"]
 layout_mode = 0
 offset_left = 117.0
 offset_top = 119.0
@@ -123,7 +123,7 @@ offset_right = 168.0
 offset_bottom = 158.6
 theme_override_fonts/font = ExtResource("2_w0j2d")
 theme_override_font_sizes/font_size = 31
-text = "PP"
+text = "00"
 
 [node name="pp" type="Label" parent="PUI/NinePatchRect"]
 layout_mode = 0
@@ -140,7 +140,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect2" type="ColorRect" parent="Control"]
+[node name="mainmenu" type="ColorRect" parent="Control"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 39.0
@@ -148,15 +148,15 @@ offset_right = 207.0
 offset_bottom = 353.0
 color = Color(0.27, 0.330833, 1, 0.231373)
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="Control/mainmenu"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 52.0
-offset_right = 203.0
-offset_bottom = 349.0
+offset_left = 4.0
+offset_top = 13.0
+offset_right = 183.0
+offset_bottom = 310.0
 color = Color(0.981533, 0.965203, 0.913514, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/ColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="Control/mainmenu/ColorRect"]
 layout_mode = 0
 offset_right = 180.0
 offset_bottom = 298.0
@@ -165,11 +165,11 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/mainmenu/ColorRect/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="fight" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="fight" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -184,7 +184,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_regk3")
 text = " Fight"
 alignment = 0
 
-[node name="bttn5" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn5" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -201,7 +201,7 @@ disabled = true
 text = " Explore"
 alignment = 0
 
-[node name="bttn6" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn6" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -218,11 +218,11 @@ disabled = true
 text = " Search..."
 alignment = 0
 
-[node name="HSeparator" type="HSeparator" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_ujno4")
 
-[node name="bttn7" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn7" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -238,11 +238,11 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_regk3")
 text = " Action...                  >"
 alignment = 0
 
-[node name="HSeparator2" type="HSeparator" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_ujno4")
 
-[node name="bttn8" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn8" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -259,7 +259,7 @@ disabled = true
 text = " Cut"
 alignment = 0
 
-[node name="bttn9" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn9" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -276,7 +276,7 @@ disabled = true
 text = " Copy"
 alignment = 0
 
-[node name="bttn10" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn10" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -293,11 +293,11 @@ disabled = true
 text = " Paste"
 alignment = 0
 
-[node name="HSeparator3" type="HSeparator" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="HSeparator3" type="HSeparator" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_ujno4")
 
-[node name="bttn11" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn11" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -310,10 +310,11 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_4tdk6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w0j2d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vji7s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_regk3")
+disabled = true
 text = " Item...                     >"
 alignment = 0
 
-[node name="bttn12" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn12" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -330,7 +331,7 @@ disabled = true
 text = " Delete"
 alignment = 0
 
-[node name="bttn13" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn13" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -347,11 +348,11 @@ disabled = true
 text = " Rename"
 alignment = 0
 
-[node name="HSeparator4" type="HSeparator" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="HSeparator4" type="HSeparator" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_ujno4")
 
-[node name="bttn14" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+[node name="bttn14" type="Button" parent="Control/mainmenu/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -364,5 +365,68 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_4tdk6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w0j2d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vji7s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_regk3")
-text = " Properties"
+disabled = true
+text = " Retreat"
+alignment = 0
+
+[node name="submenu" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 117.0
+offset_right = 395.0
+offset_bottom = 431.0
+color = Color(0.27, 0.330833, 1, 0.231373)
+
+[node name="ColorRect" type="ColorRect" parent="Control/submenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 13.0
+offset_right = 183.0
+offset_bottom = 310.0
+color = Color(0.981533, 0.965203, 0.913514, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/submenu/ColorRect"]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 298.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/submenu/ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="bttn5" type="Button" parent="Control/submenu/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("5_w0j2d")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cc4gp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4tdk6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w0j2d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vji7s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_regk3")
+text = " Defend"
+alignment = 0
+
+[node name="bttn6" type="Button" parent="Control/submenu/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.396889, 0.396889, 0.396889, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("5_w0j2d")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_cc4gp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4tdk6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w0j2d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vji7s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_regk3")
+disabled = true
+text = " title"
 alignment = 0
